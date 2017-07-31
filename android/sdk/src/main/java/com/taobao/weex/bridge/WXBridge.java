@@ -68,6 +68,17 @@ class WXBridge implements IWXBridge {
    */
   public native void takeHeapSnapshot(String filename);
 
+
+  /**
+   * JavaScript uses this methods to call Android extend code
+   *
+   * @param instanceId
+   * @param tasks
+   */
+  public byte[] extendCallNative(String instanceId, byte [] tasks) {
+    return tasks;
+  }
+
   /**
    * JavaScript uses this methods to call Android code
    *
